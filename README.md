@@ -12,4 +12,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
   c. Uses descriptive activity names to name the activities in the data set
   d. Appropriately labels the data set with descriptive variable names.
   e. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each      subject.
-3) FinalData is the exported final data resulted from the cleansing and transformation steps mentioned in 2).
+3) FinalData.txt is the exported final data resulted from the cleansing and transformation steps mentioned in 2).
