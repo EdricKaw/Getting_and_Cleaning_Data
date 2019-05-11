@@ -1,11 +1,11 @@
-#Can refer to the run_analysis.R script to get the cleansing and transformation steps to generate the final output in FinalData.txt
+Can refer to the run_analysis.R script to get the cleansing and transformation steps to generate the final output in FinalData.txt
 
-##Download the dataset
+Download the dataset
 Dataset downloaded and extracted under the folder called UCI HAR Dataset
 Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 Data Description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-##Assign each data to variables
+Assign each data to variables
 features <- features.txt : 561 rows, 2 columns 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
 activities <- activity_labels.txt : 6 rows, 2 columns 
@@ -23,19 +23,19 @@ contains recorded features train data
 y_train <- test/y_train.txt : 7352 rows, 1 columns 
 contains train data of activities’code labels
 
-##Merges the training and the test sets to create one data set
+Merges the training and the test sets to create one data set
 merged_x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
 merged_y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function
 merged_subject (10299 rows, 1 column) is created by merging subject_train and subject_test using rbind() function
 merged_data (10299 rows, 563 column) is created by merging Subject, Y and X using cbind() function
 
-##Extracts only the measurements on the mean and standard deviation for each measurement
+Extracts only the measurements on the mean and standard deviation for each measurement
 data1 (10299 rows, 88 columns) is created by subsetting merged_data, selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
 
-##Uses descriptive activity names to name the activities in the data set
+Uses descriptive activity names to name the activities in the data set
 Entire numbers in code column of the data1 replaced with corresponding activity taken from second column of the  activities variable
 
-##Appropriately labels the data set with descriptive variable names
+Appropriately labels the data set with descriptive variable names
 code column in data1 renamed into activities
 All Acc in column’s name replaced by Accelerometer
 All Gyro in column’s name replaced by Gyroscope
